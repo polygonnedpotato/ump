@@ -1,3 +1,14 @@
-{"__meta":{"id":"en_US","langName":"English","regionName":"United States","authors":["Brendan Berger"]},
-  "app":{}
+{
+  "__meta": {
+    "id": "en_US",
+    "langName": "English",
+    "regionName": "United States",
+    "authors": ["Brendan Berger"]
+  },
+  "app": {
+    "titles":{
+      "basic":"Universal Media Player",
+      "desktop":"Universal Media Player for Desktop"
+    }
+  }
 }
