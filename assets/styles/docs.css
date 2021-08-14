@@ -1,0 +1,11 @@
+#header{
+  width: 50%;
+  padding: 10px;
+  border: 5px solid grey;
+  background-color: grey;
+  color: white;
+  margin: auto;
+}
+#header header{
+  font-size: 24px;
+}
