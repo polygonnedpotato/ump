@@ -46,3 +46,6 @@ DMIME={
   "audio/x-psf":{"name":"Playstation Sound Format","suffixes":[".minipsf"]},
   "audio/mpeg":{"name":"MP3 Audio","suffixes":[".mp3"]}
 }
+DAS={
+  "DMSG":["The Audio Server is starting..."]
+}
