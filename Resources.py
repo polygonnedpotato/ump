@@ -38,5 +38,11 @@ CVIOLETBG2='\33[105m'
 CBEIGEBG2='\33[106m'
 CWHITEBG2='\33[107m'
 DSQL={
-  "MINSERT0":'''INSERT  INTO {}(variable, value) VALUES ('{}', '{}')'''  # Table, Variable, Value
+  "MINSERT0":'''INSERT INTO {}(variable, value) VALUES ('{}', '{}')''',  # Table, Variable, Value
+  "MINSERT1":'''INSERT INTO users(uname, pfp, fullname, isDefaultUser, lang) VALUES ('{}', '{}', '{}', {}, '{}')''',
+  "MCREATE0":'''CREATE TABLE IF NOT EXISTS {}(id INTEGER, url TEXT, mime TEXT)'''
+}
+DMIME={
+  "audio/x-psf":{"name":"Playstation Sound Format","suffixes":[".minipsf"]},
+  "audio/mpeg":{"name":"MP3 Audio","suffixes":[".mp3"]}
 }

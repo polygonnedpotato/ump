@@ -11,5 +11,9 @@
       "basic":"Universal Media Player",
       "desktop":"Universal Media Player for Desktop"
     }
+  },
+  "error":{
+    "NO_FILE":"The file {} could not be found",
+    "URL_INVALID":"The url ({}) is an invalid url"
   }
 }

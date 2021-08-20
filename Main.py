@@ -25,8 +25,8 @@ def init(cfgFile,dbgmd):
     else:
       vshrt+="."
   SQL.init()
-  SQL.storeValue("idb","app","lastStart",st)
-  SQL.storeValue("idb","app","version",__meta["version"])
+  SQL.storeInternalValue("app","lastStart",st)
+  SQL.storeInternalValue("app","version",__meta["version"])
 try:
   a0=sys.argv[1]
 except:
@@ -45,5 +45,6 @@ except:
   a1=True
 print("argument 0 = "+a0+"\nargument 1 = "+str(a1))
 init(a0,a1)
-Debug.log("Main","Universal Media Player "+vshrt,0)
+Debug.log("Main","Universal Media Player "+vshrt,1)
+import AudioServer
 User.openUserWindow()
