@@ -37,12 +37,30 @@ CBLUEBG2='\33[104m'
 CVIOLETBG2='\33[105m'
 CBEIGEBG2='\33[106m'
 CWHITEBG2='\33[107m'
+DSETUP={
+  "TOUCH":["/config.json","/log","/db/","/db/user.db","/db/medialib.db","/db/internal.db"]
+}
+DDFLT={
+  "HOMEDIR"={
+    "Linux":"/home/{}",
+    "Windows": "{}\Users\{}",
+    "Android":"/storage/emulated/0"
+  }
+}
+DALL={
+  "OS"={
+    "Android":False,
+    "Windows":False,
+    "Linux":True,
+    "MacOS":False
+  }
+}
 DSQL={
   "MINSERT0":'''INSERT INTO {}(variable, value) VALUES ('{}', '{}')''',  # Table, Variable, Value
   "MINSERT1":'''INSERT INTO users(uname, pfp, fullname, isDefaultUser, lang) VALUES ('{}', '{}', '{}', {}, '{}')''',
   "MCREATE0":'''CREATE TABLE IF NOT EXISTS {}(id INTEGER, url TEXT, mime TEXT)'''
 }
-DMIME={
+DMIME={ #TODO: Add all mime types.
   "audio/x-psf":{"name":"Playstation Sound Format","suffixes":[".minipsf"]},
   "audio/mpeg":{"name":"MP3 Audio","suffixes":[".mp3"]}
 }
