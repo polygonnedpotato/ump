@@ -41,14 +41,14 @@ DSETUP={
   "TOUCH":["/config.json","/log","/db/","/db/user.db","/db/medialib.db","/db/internal.db"]
 }
 DDFLT={
-  "HOMEDIR"={
+  "HOMEDIR":{
     "Linux":"/home/{}",
-    "Windows": "{}\Users\{}",
+    "Windows":"{}\\Users\\{}",
     "Android":"/storage/emulated/0"
   }
 }
 DALL={
-  "OS"={
+  "OS":{
     "Android":False,
     "Windows":False,
     "Linux":True,
@@ -58,6 +58,8 @@ DALL={
 DSQL={
   "MINSERT0":'''INSERT INTO {}(variable, value) VALUES ('{}', '{}')''',  # Table, Variable, Value
   "MINSERT1":'''INSERT INTO users(uname, pfp, fullname, isDefaultUser, lang) VALUES ('{}', '{}', '{}', {}, '{}')''',
+  "MINSERT2":'''INSERT INTO config(flag, value) VALUES ('{}', '{}')''',
+  "MINSERT3":'''INSERT INTO {}_httpreqhistory(url, method, datetime, responceCode) VALUES ('{}', '{}', '{}', {})''',
   "MCREATE0":'''CREATE TABLE IF NOT EXISTS {}(id INTEGER, url TEXT, mime TEXT)'''
 }
 DMIME={ #TODO: Add all mime types.

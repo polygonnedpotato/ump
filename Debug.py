@@ -10,6 +10,7 @@ def load(confLocation,dbgmd):
   global debugmode
   debugmode = dbgmd 
 def log(src,msg,lvl):
+  """Creates a log entry and sends data to stdout. src defines the source, msg defines the message, and lvl defines the log level. Valid inputs for lvl are: 0 (Info), 1 (Log), 2 (Warning), 3 (Error), and 4 (Debug)."""
   l=open(ll,"a")
   if lvl==0:
     print(r.CBLUEBG+"[INF]["+r.CBOLD+src+r.CEND+r.CBLUEBG+"]: "+msg+r.CEND)

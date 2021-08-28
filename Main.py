@@ -7,6 +7,7 @@ import Resources as r
 import sys
 import os
 import datetime
+import Net
 from pathlib import Path
 def init(cfgFile,dbgmd):
   Debug.load(cfgFile,dbgmd)
@@ -27,6 +28,9 @@ def init(cfgFile,dbgmd):
   SQL.init()
   SQL.storeInternalValue("app","lastStart",st)
   SQL.storeInternalValue("app","version",__meta["version"])
+  SQL.storenetflag("UserAgent","UMP/"+vshrt)
+  t=Net.HTTPRequestObject("internal")
+  print(t.get("https://bing.com"))
 try:
   a0=sys.argv[1]
 except:

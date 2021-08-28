@@ -1,5 +1,6 @@
 __meta={
   "type":"codec",
+  "codecType":"audio-codec",
   "name":"System Decoder",
   "author":"Brendan Berger",
   "version":[0,0,0,0],
@@ -24,4 +25,10 @@ class MediaDecoder:
       sf.sndbffr.play()
       sf.playing=False
   def pause(sf):
-    
+    if sf.decoder=="tkSnack":
+      sf.sndbffr.pause()
+      sf.playing=False
+  def stop(sf):
+    if sf.decoder=="tkSnack":
+      sf.sndbffr.stop()
+      sf.playing=False
