@@ -52,7 +52,8 @@ DALL={
     "Android":False,
     "Windows":False,
     "Linux":True,
-    "MacOS":False
+    "MacOS":False,
+    "ChromeOS":False
   }
 }
 DSQL={

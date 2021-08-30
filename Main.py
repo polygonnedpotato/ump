@@ -8,6 +8,7 @@ import sys
 import os
 import datetime
 import Net
+import SDL
 from pathlib import Path
 def init(cfgFile,dbgmd):
   Debug.load(cfgFile,dbgmd)
